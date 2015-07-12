@@ -1,7 +1,23 @@
 @(message: String)
 
 @main("Welcome to Play") {
+    
+    <div id="codemirror-wrapper">
+        <div id="codemirror-editor">
+        </div>
+    </div>
+    <script>
 
-    @play20.welcome(message)
+        var myCodeMirror = CodeMirror(document.getElementById("codemirror-editor"),
+            {"rtlMoveVisually" : false,
+            mode: {
+                name: "gfm",
+                highlightFormatting: true
+              },
+            lineWrapping: true
+            });
+    </script>
+
+    Hello world
 
 }
